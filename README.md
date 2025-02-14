@@ -1,7 +1,7 @@
 # OOSGMS-OPTIMISER
 Magisk module to optimise and remove trackers for GMS and OOS
 
-To uninstall please run the action (tap module on ksu) and then un-install normally.
+To uninstall please run the action (tap module on ksu) (recomended to use mmrl app) and then un-install normally.
 
 Also applies aditional tweaks to:
 com.google.ar.core
