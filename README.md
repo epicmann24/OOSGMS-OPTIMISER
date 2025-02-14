@@ -22,3 +22,5 @@ com.oculus.twilight
 com.kiloo.subwaysurf
 com.einnovation.temu
 com.twitter.android
+
+https://xdaforums.com/t/debloat-optimisaion-guide-gms-tracker-and-analytics-disabler.4718387/
