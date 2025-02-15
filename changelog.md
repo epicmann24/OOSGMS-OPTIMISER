@@ -1,5 +1,5 @@
-disabled more telemetry
+Better optimisations for specific apps
 
-made completely uninstallable via action.sh
+Optimised script
 
-extra optimisations for specific apps
+Smaller log file
