@@ -1,5 +1,7 @@
-Better optimisations for specific apps
+Optimised script execution
 
-Optimised script
+Added 15s delay for execution to compensate for device unlock speed
 
-Smaller log file
+Fixed some tweaks not applying
+
+Oxygen OS specific tweaks
