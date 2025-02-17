@@ -26,7 +26,8 @@ disable_services() {
     services="$@"
 
     if ! pm list packages | cut -d':' -f2 | grep -q "^$package$"; then
-        echo "$package not found"
+        #echo "$package not found"
+	#can uncomment, but more overhead
         return 0
     fi
 
@@ -36,15 +37,15 @@ disable_services() {
         if service_exists "$service"; then
             echo "Disabling $service in $package"
             $c "$package/$service"
-        else
-            echo "Service $service not found in $package"
+        #else
+            #echo "Service $service not found in $package"
+            #can uncomment, but more overhead
         fi
     done
 
     nline
 }
 
-# Define package name variables
 gms="com.google.android.gms"
 byte="com.bytedance"
 
@@ -53,7 +54,6 @@ SERVICES="
     $gms.ads.AdService
     $gms.analytics.AnalyticsTaskService
     $gms.analytics.AnalyticsService
-    $gms.analytics.AnalyticsJobService
     $gms.analytics.service.AnalyticsService
     $gms.analytics.AnalyticsReceiver
     $gms.measurement.service.MeasurementBrokerService
@@ -95,7 +95,6 @@ disable_services "com.google.android.apps.youtube.music" $SERVICES
 
 $c "$gms/$gms.analytics.AnalyticsTaskService"
 $c "$gms/$gms.analytics.internal.PlayLogReportingService"
-$c "$gms/$gms.analytics.service.AnalyticsService"
 $c "$gms/$gms.analytics.AnalyticsReceiver"
 $c "$gms/$gms.measurement.service.MeasurementBrokerService"
 $c "$gms/$gms.measurement.PackageMeasurementService"
@@ -115,6 +114,7 @@ $c "$gms/$gms.common.stats.StatsUploadService"
 $c "$gms/$gms.adid.service.AdIdProviderService"
 $c "$gms/$gms.adsidentity.service.AdServicesExtDataStorageService"
 $c "$gms/$gms.nearby.exposurenotification.WakeUpService"
+$c "$gms/$gms.analytics.service.AnalyticsService"
 
 echo "-----"
 echo "Tweaks undone. Please now uninstall the module"
