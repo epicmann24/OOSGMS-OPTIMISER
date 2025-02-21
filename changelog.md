@@ -1,11 +1,5 @@
-Optimised script execution
+Changed delay from 15s to 5s
 
-Added 15s delay for execution to compensate for device unlock speed
+Removed some location telemetry (shouldn't but lmk if issues appear)
 
-Fixed some tweaks not applying
-
-Oxygen OS specific tweaks
-
-ISSUE: com.google.android.gms/com.google.android.gms.analytics.AnalyticsService may not be disabled
-
-Fix ETA: Unknown (GMS issue)
+Removed Meta bloat
