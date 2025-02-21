@@ -1,7 +1,7 @@
 id=OOSGMS-OPTIMISER
 name=Oxygen OS + GMS optimiser
-version=v1.0.3
-versionCode=4
+version=v1.0.4
+versionCode=5
 author=Epicmann24
 description=Disable some telementry and bloat
 updateJson=https://raw.githubusercontent.com/epicmann24/OOSGMS-OPTIMISER/main/update.json

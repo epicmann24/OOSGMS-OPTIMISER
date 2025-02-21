@@ -7,6 +7,7 @@ echo "-----"
 sleep 2
 
 c="pm enable"
+un="cmd package install-existing"
 nline() {
     echo -e "\n\n\n"
 }
@@ -115,6 +116,10 @@ $c "$gms/$gms.adid.service.AdIdProviderService"
 $c "$gms/$gms.adsidentity.service.AdServicesExtDataStorageService"
 $c "$gms/$gms.nearby.exposurenotification.WakeUpService"
 $c "$gms/$gms.analytics.service.AnalyticsService"
+
+$un com.facebook.services
+$un com.facebook.appmanager
+$un com.facebook.system
 
 echo "-----"
 echo "Tweaks undone. Please now uninstall the module"

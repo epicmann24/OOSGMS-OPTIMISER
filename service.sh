@@ -12,11 +12,12 @@ while true; do
     sleep 5
 done
 
-sleep 15
+sleep 5
 
 echo "Script beginning"
 
 c="pm disable"
+un="pm uninstall --user 0"
 
 nline() {
     echo -e "\n\n\n"
@@ -126,5 +127,9 @@ $c "$gms/$gms.adid.service.AdIdProviderService"
 $c "$gms/$gms.adsidentity.service.AdServicesExtDataStorageService"
 $c "$gms/$gms.nearby.exposurenotification.WakeUpService"
 $c "$gms/$gms.analytics.service.AnalyticsService"
+
+$un com.facebook.services
+$un com.facebook.appmanager
+$un com.facebook.system
 
 exit
