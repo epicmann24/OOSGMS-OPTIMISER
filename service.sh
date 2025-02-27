@@ -127,6 +127,11 @@ $c "$gms/$gms.adid.service.AdIdProviderService"
 $c "$gms/$gms.adsidentity.service.AdServicesExtDataStorageService"
 $c "$gms/$gms.nearby.exposurenotification.WakeUpService"
 $c "$gms/$gms.analytics.service.AnalyticsService"
+$c "$gms/$gms.clearcut.debug.ClearcutDebugDumpService"
+$c "$gms/$gms.clearcut.uploader.QosUpdaterService"
+$c "$gms/$gms.stats.PlatformStatsCollectorService"
+$c "$gms/$gms.tron.CollectionService"
+$c "$gms/$gms.personalsafety.service.SndDetectionService"
 
 $un com.facebook.services
 $un com.facebook.appmanager
