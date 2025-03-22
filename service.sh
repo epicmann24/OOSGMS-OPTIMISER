@@ -12,12 +12,12 @@ while true; do
     sleep 5
 done
 
-sleep 5
+sleep 10
 
 echo "Script beginning"
 
-c="pm disable"
-un="pm uninstall --user 0"
+c="su -c pm disable"
+un="su -c pm uninstall --user 0"
 
 nline() {
     echo -e "\n\n\n"
@@ -106,8 +106,11 @@ disable_services "com.google.android.youtube" $SERVICES
 disable_services "com.google.android.apps.youtube.music" $SERVICES
 
 $c "$gms/$gms.analytics.AnalyticsTaskService"
+$c "$gms/$gms.analytics.AnalyticsService"
 $c "$gms/$gms.analytics.internal.PlayLogReportingService"
 $c "$gms/$gms.analytics.AnalyticsReceiver"
+$c "$gms/$gms.analytics.service.AnalyticsService"
+$c "$gms/$gms.analytics.analytics.AnalyticsService"
 $c "$gms/$gms.measurement.service.MeasurementBrokerService"
 $c "$gms/$gms.measurement.PackageMeasurementService"
 $c "$gms/$gms.measurement.PackageMeasurementReceiver"
@@ -126,15 +129,17 @@ $c "$gms/$gms.common.stats.StatsUploadService"
 $c "$gms/$gms.adid.service.AdIdProviderService"
 $c "$gms/$gms.adsidentity.service.AdServicesExtDataStorageService"
 $c "$gms/$gms.nearby.exposurenotification.WakeUpService"
-$c "$gms/$gms.analytics.service.AnalyticsService"
 $c "$gms/$gms.clearcut.debug.ClearcutDebugDumpService"
-$c "$gms/$gms.clearcut.uploader.QosUpdaterService"
+$c "$gms/$gms.clearcut.uploader.QosUploaderService"
 $c "$gms/$gms.stats.PlatformStatsCollectorService"
 $c "$gms/$gms.tron.CollectionService"
 $c "$gms/$gms.personalsafety.service.SndDetectionService"
+$c "$gms/$gms.semanticlocation.service.SemanticLocationService"
+
 
 $un com.facebook.services
 $un com.facebook.appmanager
 $un com.facebook.system
+$un com.oplus.powermonitor
 
 exit
